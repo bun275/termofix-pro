@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TermoFix Pro – Instalații sanitare și centrale termice</title>
+<meta name="description" content="Centrale termice, instalații sanitare, încălzire în pardoseală și intervenții de urgență. Garanție scrisă, preț spus înainte, sosire în maximum 60 de minute.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F9FAFB; --ice:#EEF2F6; --ink:#0F172A; --teal:#0D9488; --teal-d:#0B7A70; --coral:#F43F5E;
+  --mut:#475569; --line:#DCE3EA; --white:#fff;
+  --f:"DM Sans","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 18px/1.7 var(--f);font-optical-sizing:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-weight:700;line-height:1.1;letter-spacing:-.03em}
+h2{font-size:clamp(30px,4vw,44px);margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:700 18.7px var(--f);padding:16px 30px;border-radius:10px;border:1.5px solid transparent;text-decoration:none;cursor:pointer;transition:background .15s,border-color .15s}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-d)}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:#fff}
+section{padding:112px 0}
+.lead{color:var(--mut);max-width:560px}
+
+/* header */
+header{background:var(--bg)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:84px}
+.logo{font-weight:700;font-size:22px;letter-spacing:-.03em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:12px;height:12px;border:2.5px solid var(--teal);border-radius:50%;display:block}
+nav{display:flex;align-items:center;gap:32px;font-size:16px;font-weight:500}
+nav a{text-decoration:none;color:var(--mut)}
+nav a:hover{color:var(--ink)}
+.urg{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:600;border:1px solid var(--line);background:#fff;padding:7px 14px;border-radius:999px;text-decoration:none}
+.urg b{width:9px;height:9px;border-radius:50%;background:var(--coral);position:relative}
+.urg b::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--coral);animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(3);opacity:0}}
+@keyframes blink{50%{opacity:.35}}
+
+/* hero */
+.hero{text-align:center;padding:120px 0 136px}
+.hero h1{font-size:clamp(42px,7vw,88px);max-width:880px;margin:0 auto 28px;letter-spacing:-.045em}
+.hero p{font-size:21px;color:var(--mut);max-width:520px;margin:0 auto 44px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.hero small{display:block;margin-top:30px;color:var(--mut);font-size:15.5px}
+
+/* tabs */
+.ice{background:var(--ice)}
+.tabs{display:flex;gap:6px;margin:40px 0 0;overflow-x:auto;scrollbar-width:none;position:relative;box-shadow:inset 0 -1.5px 0 var(--line)}
+.tabs::-webkit-scrollbar{display:none}
+.tab{font:600 17px var(--f);color:var(--mut);background:none;border:0;padding:16px 20px;cursor:pointer;white-space:nowrap;position:relative;display:inline-flex;align-items:center;gap:9px}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected=true]{color:var(--ink)}
+html:not(.js) .tab[aria-selected=true]::after{content:"";position:absolute;left:12px;right:12px;bottom:-1.5px;height:3px;background:var(--teal);border-radius:3px}
+.tab .cd{width:8px;height:8px;border-radius:50%;background:var(--coral)}
+.panel{display:none;padding-top:44px}
+.panel.on{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.panel h3{font-size:clamp(28px,3.2vw,38px);margin-bottom:14px}
+.panel p{color:var(--mut);margin-bottom:26px;max-width:480px}
+.chip{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;margin-bottom:16px}
+.chip b{width:9px;height:9px;border-radius:50%;background:var(--coral)}
+.facts{background:#fff;border-radius:16px;padding:32px;align-self:start}
+.facts ul{list-style:none;padding:0;display:grid;gap:14px;margin-bottom:26px}
+.facts li{padding-left:28px;position:relative;font-size:17px}
+.facts li::before{content:"";position:absolute;left:0;top:.55em;width:13px;height:7px;border-left:2.5px solid var(--teal);border-bottom:2.5px solid var(--teal);transform:rotate(-45deg)}
+.facts .pr{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;color:var(--mut);font-size:15.5px}
+.facts .pr b{font-size:30px;color:var(--ink);letter-spacing:-.03em}
+
+/* trust */
+.band{display:grid;grid-template-columns:repeat(3,1fr)}
+.band div{padding:8px 36px;border-left:1.5px solid var(--line)}
+.band div:first-child{border-left:0;padding-left:0}
+.band h3{font-size:26px;margin-bottom:8px}
+.band p{color:var(--mut);font-size:16.5px}
+.num{display:block;color:var(--teal);font-weight:700;font-size:15px;letter-spacing:.02em;margin-bottom:14px}
+
+/* form */
+.book{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}
+.book ul{list-style:none;padding:0;margin-top:34px;display:grid;gap:18px;font-size:17px}
+.book li b{display:block;font-size:14.5px;color:var(--mut);font-weight:500}
+.book li a{font-weight:600;text-decoration:none;font-size:20px}
+form{background:#fff;border-radius:20px;padding:40px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fl{margin-bottom:20px}
+label{display:block;font-weight:600;font-size:15.5px;margin-bottom:7px}
+input,select{width:100%;font:inherit;font-size:17px;padding:14px 16px;border:1.5px solid #CBD5E1;border-radius:10px;background:var(--bg);color:var(--ink);min-height:52px}
+input:focus,select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(13,148,136,.2)}
+input[type=date]{font-family:var(--f)}
+.bad{border-color:#BE123C!important}
+.err{display:none;color:#BE123C;font-size:14.5px;margin-top:4px}
+.bad+.err{display:block}
+form .btn{width:100%}
+.ok{display:none;margin-top:18px;padding:16px 18px;border-radius:10px;background:var(--ice);font-size:16.5px}
+.fine{font-size:14px;color:var(--mut);margin-top:14px}
+
+footer{padding:36px 0 44px;border-top:1px solid var(--line);color:var(--mut);font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px}
+
+@media (max-width:900px){
+  .panel.on,.book{grid-template-columns:1fr;gap:36px}
+  .band{grid-template-columns:1fr;gap:28px}
+  .band div{border-left:0;padding:0 0 24px;border-bottom:1.5px solid var(--line)}
+  .band div:last-child{border-bottom:0}
+  nav .l{display:none}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  section{padding:76px 0}
+  .hero{padding:72px 0 88px}
+  .hero-btns .btn{width:100%}
+  .two{grid-template-columns:1fr}
+  form{padding:26px}
+  .urg span{display:none}
+  .urg{padding:9px 12px}
+}
+/* animații */
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes drift{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.06)}}
+header .bar{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.hero{position:relative;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;left:50%;top:50%;border:1.5px solid var(--line);border-radius:50%;pointer-events:none;animation:drift 12s ease-in-out infinite}
+.hero::before{width:560px;height:560px}
+.hero::after{width:860px;height:860px;animation-delay:-5s;opacity:.7}
+.hero .wrap{position:relative;z-index:1}
+.hero h1,.hero p,.hero-btns,.hero small{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1{animation-delay:.1s}.hero p{animation-delay:.25s}.hero-btns{animation-delay:.4s}.hero small{animation-delay:.55s}
+.btn{transition:background .2s,border-color .2s,color .2s,transform .2s,box-shadow .2s}
+.btn-teal:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(13,148,136,.28)}
+.btn-line:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0);box-shadow:none}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.ind{position:absolute;left:0;bottom:0;height:3px;pointer-events:none;background:var(--teal);border-radius:3px;transition:left .4s cubic-bezier(.2,.7,.2,1),width .4s cubic-bezier(.2,.7,.2,1)}
+.panel.on>div:first-child>*{animation:rise .55s cubic-bezier(.2,.7,.2,1) both}
+.panel.on>div:first-child>*:nth-child(2){animation-delay:.07s}
+.panel.on>div:first-child>*:nth-child(3){animation-delay:.14s}
+.panel.on>div:first-child>*:nth-child(4){animation-delay:.2s}
+.panel.on .facts{animation:rise .6s .1s cubic-bezier(.2,.7,.2,1) both}
+.panel.on .facts li{animation:rise .5s cubic-bezier(.2,.7,.2,1) both}
+.panel.on .facts li:nth-child(1){animation-delay:.2s}
+.panel.on .facts li:nth-child(2){animation-delay:.28s}
+.panel.on .facts li:nth-child(3){animation-delay:.36s}
+.panel.on .facts li:nth-child(4){animation-delay:.44s}
+.num{transition:letter-spacing .4s}
+.band div:hover .num{letter-spacing:.2em}
+input,select{transition:border-color .2s,box-shadow .2s}
+.ok{animation:rise .5s cubic-bezier(.2,.7,.2,1) both}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top"><i aria-hidden="true"></i>TermoFix Pro</a>
+    <nav aria-label="Navigare principală">
+      <a class="l" href="#servicii">Servicii</a>
+      <a class="l" href="#garantii">Garanții</a>
+      <a class="l" href="#programare">Programare</a>
+      <a class="urg" href="tel:+40700000000"><b aria-hidden="true"></b><span>Urgențe 24/7</span><strong>0700 000 000</strong></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <h1>Instalații și centrale termice, făcute simplu.</h1>
+    <p>Montaj, reparații și intervenții de urgență, cu preț spus înainte și garanție scrisă.</p>
+    <div class="hero-btns">
+      <a class="btn btn-teal" href="#programare">Programează o vizită</a>
+      <a class="btn btn-line" href="tel:+40700000000">Sună: 0700 000 000</a>
+    </div>
+    <small>Bacău și împrejurimi · sosire în maximum 60 de minute</small>
+  </div>
+</section>
+
+<section class="ice" id="servicii">
+  <div class="wrap">
+    <h2>Ce putem face pentru tine</h2>
+    <p class="lead">Alege o categorie și vezi ce include, cât durează și de la ce preț pornim.</p>
+
+    <div class="tabs" role="tablist" aria-label="Servicii">
+      <button class="tab" role="tab" id="t0" aria-controls="p0" aria-selected="true">Centrale Termice</button>
+      <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1">Instalații Sanitare</button>
+      <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Încălzire Pardoseală</button>
+      <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Urgențe <span class="cd" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="panel on" role="tabpanel" id="p0" aria-labelledby="t0">
+      <div>
+        <h3>Centrale termice</h3>
+        <p>Montăm centrale noi sau o înlocuim pe cea veche, o punem în funcțiune și te învățăm să o folosești. Facem și reparații și revizia anuală, cu piese originale.</p>
+        <a class="btn btn-teal" href="#programare" data-svc="Centrale termice">Programează</a>
+      </div>
+      <div class="facts">
+        <ul><li>Montaj și punere în funcțiune într-o zi</li><li>Evacuare gaze și racorduri, conform normelor</li><li>Revizie anuală și verificare ISCIR</li><li>Garanție scrisă la manoperă și echipament</li></ul>
+        <div class="pr"><span>montaj, de la</span><b>1.800 lei</b></div>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
+      <div>
+        <h3>Instalații sanitare</h3>
+        <p>De la o baie întreagă la un boiler înlocuit sau o bucătărie nouă. Planificăm împreună, lucrăm curat și respectăm termenul stabilit.</p>
+        <a class="btn btn-teal" href="#programare" data-svc="Instalații sanitare">Programează</a>
+      </div>
+      <div class="facts">
+        <ul><li>Țevi noi, racorduri și obiecte sanitare</li><li>Boilere, hidrofoare și contorizare</li><li>Reparații pentru robineți și scurgeri</li><li>Protecție pentru podea și curățenie la final</li></ul>
+        <div class="pr"><span>o baie, de la</span><b>2.500 lei</b></div>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+      <div>
+        <h3>Încălzire în pardoseală</h3>
+        <p>Căldură uniformă și confortabilă, fără calorifere la vedere. Se potrivește casei noi sau renovărilor, împreună cu o centrală sau cu o pompă de căldură.</p>
+        <a class="btn btn-teal" href="#programare" data-svc="Încălzire în pardoseală">Programează</a>
+      </div>
+      <div class="facts">
+        <ul><li>Proiectare pe camere, în funcție de necesar</li><li>Montaj de țevi, colectoare și automatizare</li><li>Probă de presiune înainte de turnarea șapei</li><li>Reglaj și predare cu instrucțiuni</li></ul>
+        <div class="pr"><span>de la</span><b>150 lei/mp</b></div>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+      <div>
+        <span class="chip"><b aria-hidden="true"></b>Urgențe 24/7</span>
+        <h3>Intervenții de urgență</h3>
+        <p>Țeavă spartă, scurgere mare, centrală oprită iarna. Răspundem la telefon non-stop și trimitem cea mai apropiată echipă, cu sosire în maximum 60 de minute în oraș.</p>
+        <a class="btn btn-teal" href="tel:+40700000000">Sună acum: 0700 000 000</a>
+      </div>
+      <div class="facts">
+        <ul><li>Dispecerat activ zi și noapte, inclusiv în weekend</li><li>Oprim pierderea de apă și securizăm instalația</li><li>Diagnostic pe loc și reparație cu piese originale</li><li>Preț comunicat înainte de începerea lucrării</li></ul>
+        <div class="pr"><span>intervenție, de la</span><b>180 lei</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="garantii">
+  <div class="wrap">
+    <div class="band">
+      <div><span class="num">01</span><h3>Garanție scrisă</h3><p>Fiecare lucrare vine cu certificat de garanție pentru manoperă și echipamente.</p></div>
+      <div><span class="num">02</span><h3>Sosire în 60 de minute</h3><p>Pentru urgențe în oraș. Te sunăm să confirmăm ora înainte să plece echipa.</p></div>
+      <div><span class="num">03</span><h3>Preț spus înainte</h3><p>Știi cât costă înainte să începem, iar costurile nu se schimbă fără acordul tău.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ice" id="programare">
+  <div class="wrap book">
+    <div>
+      <h2>Programează o vizită</h2>
+      <p class="lead">Completează formularul și te sunăm pentru confirmare, de obicei în mai puțin de 15 minute.</p>
+      <ul>
+        <li><b>Telefon, non-stop</b><a href="tel:+40700000000">0700 000 000</a></li>
+        <li><b>Email</b><a href="mailto:salut@termofixpro.example">salut@termofixpro.example</a></li>
+        <li><b>Zonă de lucru</b>Bacău și localitățile din jur, până la 30 km</li>
+      </ul>
+    </div>
+    <form id="f" novalidate>
+      <div class="two">
+        <div class="fl"><label for="nume">Nume</label><input id="nume" autocomplete="name"><div class="err">Scrie numele tău.</div></div>
+        <div class="fl"><label for="tel">Telefon</label><input id="tel" type="tel" autocomplete="tel" placeholder="07xx xxx xxx"><div class="err">Introdu un număr valid, ex. 0712 345 678.</div></div>
+      </div>
+      <div class="two">
+        <div class="fl"><label for="srv">Serviciu</label>
+          <select id="srv"><option>Centrale termice</option><option>Instalații sanitare</option><option>Încălzire în pardoseală</option><option>Intervenție de urgență</option></select></div>
+        <div class="fl"><label for="data">Data preferată</label><input id="data" type="date"></div>
+      </div>
+      <button class="btn btn-teal" type="submit">Trimite cererea</button>
+      <div class="ok" id="ok" role="status"></div>
+      <p class="fine">Folosim datele tale doar ca să te contactăm în legătură cu această cerere.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 TermoFix Pro</span>
+    <span>Firmă fictivă, creată cu rol demonstrativ. Prețurile și datele de contact sunt exemple.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab')),panels=[].slice.call(document.querySelectorAll('.panel'));
+  var bar=document.querySelector('.tabs'),ind=document.createElement('span');
+  ind.className='ind';bar.appendChild(ind);
+  function moveInd(){
+    var t=document.querySelector('.tab[aria-selected=true]');
+    ind.style.left=(t.offsetLeft+12)+'px';ind.style.width=(t.offsetWidth-24)+'px';
+  }
+  window.addEventListener('resize',moveInd);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(moveInd);
+  function sel(i,focus){
+    tabs.forEach(function(t,j){var on=i===j;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;});
+    panels.forEach(function(p,j){var on=i===j;p.hidden=!on;p.classList.toggle('on',on);});
+    if(focus)tabs[i].focus();
+    tabs[i].scrollIntoView({block:'nearest',inline:'nearest'});
+    moveInd();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){sel(i)});
+    t.addEventListener('keydown',function(e){
+      var k=e.key,n=null;
+      if(k==='ArrowRight')n=(i+1)%tabs.length;
+      else if(k==='ArrowLeft')n=(i-1+tabs.length)%tabs.length;
+      else if(k==='Home')n=0;else if(k==='End')n=tabs.length-1;
+      if(n!==null){e.preventDefault();sel(n,true);}
+    });
+  });
+  document.querySelectorAll('[data-svc]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('srv').value=a.dataset.svc;});});
+
+  moveInd();
+
+  var els=document.querySelectorAll('#servicii h2,#servicii .lead,#servicii .tabs,.band>div,.book>div,.book form');
+  els.forEach(function(el,i){
+    el.classList.add('rv');
+    var inBand=el.parentNode.classList.contains('band'),idx=inBand?[].indexOf.call(el.parentNode.children,el):(el.tagName==='FORM'?1:0);
+    el.style.setProperty('--d',(idx*0.12)+'s');
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')});}
+
+  var d=document.getElementById('data');d.min=new Date().toISOString().slice(0,10);
+  var f=document.getElementById('f'),n=document.getElementById('nume'),t=document.getElementById('tel');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var p=t.value.replace(/[\s.\-]/g,'');
+    var v1=n.value.trim().length>1,v2=/^(\+?40|0)7\d{8}$/.test(p)||/^(\+?40|0)[23]\d{8}$/.test(p);
+    n.classList.toggle('bad',!v1);t.classList.toggle('bad',!v2);
+    if(!v1||!v2)return;
+    var o=document.getElementById('ok');
+    o.textContent='Mulțumim, '+n.value.trim().split(' ')[0]+'! Am primit cererea pentru „'+document.getElementById('srv').value.toLowerCase()+'” și te sunăm în cel mai scurt timp.';
+    o.style.display='block';f.reset();
+  });
+})();
+</script>
+</body>
+</html>
